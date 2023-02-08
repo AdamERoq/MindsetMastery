@@ -21,6 +21,18 @@ test('When initialized the next number can be returned', () => {
     expect(fibonacci.next()).toBe(3);
 });
 
+test('When initialized the next number can be returned', () => {
+    expect(fibonacci.next()).toBe(1);
+});
+
+test('When initialized the next number can be returned', () => {
+    fibonacci.next();
+    fibonacci.next();
+    fibonacci.next();
+    fibonacci.next();
+    expect(fibonacci.next()).toBe(3);
+});
+
 test('When initialized with a number not in fibonacci return an error', () => {
     expect(() => {
         fibonacci.init(7);
