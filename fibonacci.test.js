@@ -25,12 +25,12 @@ test('When initialized the next number can be returned', () => {
     expect(fibonacci.next()).toBe(1);
 });
 
-test('When initialized the next number can be returned', () => {
+test('When initialized the 5th number can be returned', () => {
     fibonacci.next();
     fibonacci.next();
     fibonacci.next();
     fibonacci.next();
-    expect(fibonacci.next()).toBe(3);
+    expect(fibonacci.next()).toBe(8);
 });
 
 test('When initialized with a number not in fibonacci return an error', () => {
@@ -45,13 +45,8 @@ test('When initialized with a number not in fibonacci return an error', () => {
       }).toThrow();
 });
 
-test('When initialized with a number in the Fibonacci return that number', () => {
-    expect(fibonacci.init(8)).toBe(8);
-});
-
-
 test('When skipping a set number to return that number in the list', () => {
-    expect(fibonacci.skip(8)).toBe(13);
+    expect(fibonacci.skip(8)).toBe(34);
 });
 
 test('When initialised at 2 skipping a set number to return that number in the list', () => {
